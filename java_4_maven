@@ -1,0 +1,14 @@
+cd /tmp/
+mv jdk-8u202-linux-x64.tar.gz /opt/
+cd /opt/
+tar -xvf jdk-8u202-linux-x64.tar.gz
+cd jdk1.8.0_202
+pwd
+cd /etc/init.d/
+vim java8.sh --> esc i -->
+   export JAVA_HOME=/opt/jdk1.8.0_202
+   export PATH=${JAVA_HOME}/bin:${PATH}
+   --> :wq
+source java8.sh
+java -version
+
